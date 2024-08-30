@@ -343,3 +343,13 @@ dt.rowReorder.disable();
   }
 
 })();
+
+
+// form Range 
+const events = ['mousemove', 'touchmove']
+
+$.each(events, function(k,v) {
+  $('#timerange').on(v, function() {
+    $('#timetext').text($('#timerange').val());
+  });
+})

@@ -83,8 +83,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 /* For larger screens, cut the width */
                 @media (min-width: 768px) {
                     #toast-container > .toast {
-                        max-width: 50%; /* Narrower on larger screens */
-                        width: auto; /* Auto width for a better layout */
+                        max-width: 80%; /* Narrower on larger screens */
+                        width: 80%; /* Auto width for a better layout */
+                        font-size: larger;
                     }
                 }
                 #toast-container > .toast-success {
@@ -106,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     toastr.success('Registration successful!');
                     setTimeout(function() {
                         window.location.href = 'pages-login.php';
-                    }, 10000);
+                    }, 100000);
                 };
             </script>";
         } else {
@@ -124,15 +125,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     justify-content: center;
                 }
                 #toast-container > .toast {
-                    max-width: 90%; /* Narrower */
+                    
                     width: 90%;
                     word-wrap: break-word;
                     text-align: center;
                 }
                 @media (min-width: 768px) {
                     #toast-container > .toast {
-                        max-width: 50%;
-                        width: auto;
+                        width: 80%;
+                        font-size: larger;
                     }
                 }
                 #toast-container > .toast-success {
@@ -177,12 +178,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 max-width: 90%;
                 width: 90%;
                 word-wrap: break-word;
+                    font-size: larger;
                 text-align: center;
             }
             @media (min-width: 768px) {
                 #toast-container > .toast {
-                    max-width: 50%;
-                    width: auto;
+                    max-width: 90%;
+                    width: 90%;
                 }
             }
             #toast-container > .toast-success {
@@ -197,14 +199,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 closeButton: true,
                 progressBar: true,
                 positionClass: 'toast-top-full-width',
-                timeOut: 10000,
-                extendedTimeOut: 10000
+                timeOut: 100000,
+                extendedTimeOut: 100000
             };
             window.onload = function() {
                 toastr.error('Error: $error_message');
                 setTimeout(function() {
                     window.location.href = 'pages-register.php';
-                }, 10000);
+                }, 100000);
             };
         </script>";
     }
