@@ -31,8 +31,6 @@
   // <!-- End Sidebar-->
     ?>
   
-
-
   <main id="main" class="main">
 
     <div class="pagetitle">
@@ -40,7 +38,7 @@
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard12</li>
+          <li class="breadcrumb-item active">Dashboard</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -176,6 +174,7 @@
       </div>
     </section>
     
+    <!-- Table section  -->
     <section class="section dashboard">
           <!-- Recent Meeting Section -->
           <div class="col-12">
@@ -196,7 +195,7 @@
                 <h5 class="card-title">Recent Meeting <span>| Today</span></h5>
         
                 <div class="table-responsive">
-                  <table  id="example" class="display nowrap table-borderless" style="width:100%">
+                  <table  id="example" class="display nowrap" style="width:100%">
                     <thead>
                       <tr>
                         <th scope="col">Meet #Id</th>

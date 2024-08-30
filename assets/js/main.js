@@ -298,9 +298,13 @@
    * Initiate Datatables
    */
 
-  new DataTable('#example', {
-    responsive: false,    
+ const dt = new DataTable('#example', {
+  responsive: true,
+  rowReorder: {
+    selector: 'td:nth-child(2)'
+  }
 });
+dt.rowReorder.disable();
 
   const datatables = select('.datatable', true)
   datatables.forEach(datatable => {
