@@ -81,12 +81,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     text-align: center;
                 }
                 /* For larger screens, cut the width */
-                @media (min-width: 768px) {
-                    #toast-container > .toast {
-                        max-width: 80%; /* Narrower on larger screens */
-                        width: 80%; /* Auto width for a better layout */
-                        font-size: larger;
-                    }
+                @media (max-device-width: 480px) {
+                #toast-container > .toast {
+                    max-width: 90%;
+                    width: 70% !important;
+                }
+                #toast-container .toast-message {
+                    font-size: 2em !important;
+                }
                 }
                 #toast-container > .toast-success {
                     background-color: green !important; /* Green for success */
@@ -130,11 +132,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     word-wrap: break-word;
                     text-align: center;
                 }
-                @media (min-width: 768px) {
-                    #toast-container > .toast {
-                        width: 80%;
-                        font-size: larger;
-                    }
+                @media (max-device-width: 480px) {
+                #toast-container > .toast {
+                    max-width: 90%;
+                    width: 70% !important;
+                }
+                #toast-container .toast-message {
+                    font-size: 2em !important;
+                }
+            }
                 }
                 #toast-container > .toast-success {
                     background-color: green !important;
@@ -178,13 +184,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 max-width: 90%;
                 width: 90%;
                 word-wrap: break-word;
-                    font-size: larger;
                 text-align: center;
             }
-            @media (min-width: 768px) {
+            @media (max-device-width: 480px) {
                 #toast-container > .toast {
                     max-width: 90%;
-                    width: 90%;
+                    width: 70% !important;
+                }
+                #toast-container .toast-message {
+                    font-size: 2em !important;
                 }
             }
             #toast-container > .toast-success {
@@ -213,4 +221,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $conn->close();
-?>
+
