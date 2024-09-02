@@ -1231,3 +1231,38 @@ h6 {
   font-size: 13px;
   color: #012970;
 }
+
+/* ========================================================== */
+/* Toast  */
+/* ========================================================== */
+#toast-container {
+  top: 10px;
+  left: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#toast-container > .toast {
+  max-width: 90%; /* Slightly narrower */
+  width: 90%; /* Ensure messages wrap and don't take full width */
+  word-wrap: break-word; /* Ensure long words wrap properly */
+  text-align: center;
+}
+/* For larger screens, cut the width */
+@media (max-device-width: 480px) {
+#toast-container > .toast {
+  max-width: 90%;
+  width: 70% !important;
+}
+#toast-container .toast-message {
+  font-size: 2em !important;
+}
+}
+#toast-container > .toast-success {
+  background-color: green !important; /* Green for success */
+}
+#toast-container > .toast-error {
+  background-color: red !important; /* Red for error */
+}
